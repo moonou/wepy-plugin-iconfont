@@ -14,11 +14,11 @@ yarn add wepy-plugin-iconfont
 ## 配置
 下面的使用方式时在wepy@2环境下，如果你使用wepy@1，请使用[1.x 文档](https://github.com/moonou/wepy-plugin-iconfont/blob/v1/README.md)
 
-首先需要找到iconfont链接中的tag。在这段iconfont的css地址中`//at.alicdn.com/t/font_964045_4hbvi55v0tg.css`，`font_964045_4hbvi55v0tg`是需要在配置文件中配置的。
+首先需要找到iconfont链接中的tag。在这段iconfont的css地址中`//at.alicdn.com/t/font_964045_4hbvi55v0tg.css`，`font_964045_4hbvi55v0tg`需要在配置文件中使用。具体内容根据iconfont中的路径为准。
 
 wepy.config.js
 ``` javascript
-const IconfontPlugin = require('../../Github/wepy-plugin-iconfont')
+const IconfontPlugin = require('wepy-plugin-iconfont')
 
 module.exports = {
   plugins: {
