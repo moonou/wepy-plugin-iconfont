@@ -4,24 +4,33 @@
 # 使用
 ## 安装
 ``` bash
-npm install wepy-plugin-iconfont --save-dev
+npm install wepy-plugin-iconfont
 ```
 or
 ``` bash
-yarn add wepy-plugin-iconfont --dev
+yarn add wepy-plugin-iconfont
 ```
 
 ## 配置
+下面的使用方式时在wepy@2环境下，如果你使用wepy@1，请使用[1.x 文档](https://github.com/moonou/wepy-plugin-iconfont/blob/v1/README.md)
+
+首先需要找到iconfont链接中的tag。在这段iconfont的css地址中`//at.alicdn.com/t/font_964045_4hbvi55v0tg.css`，`font_964045_4hbvi55v0tg`是需要在配置文件中配置的。
 
 wepy.config.js
 ``` javascript
-plugins: {
-  'iconfont': {
-    tag: '[iconfont_tag]'
+const IconfontPlugin = require('../../Github/wepy-plugin-iconfont')
+
+module.exports = {
+  plugins: {
+    'iconfont': {
+      tag: 'font_964045_4hbvi55v0tg' // 上面步骤提取的值
+    }
   }
 }
 ```
 
-`[iconfont_tag]`为下图中的值
-![iconfont_tag](https://i.loli.net/2018/08/20/5b7abe6537ab8.png
-)
+## 模板语法
+在`*.wpy`文件中可以使用iconfont的Font class模式使用iconfont，假如在iconfont中的class name为`icon-user`，那么在模板语法中可以这样使用
+``` html
+<i class="iconfont icon-user" />
+```
