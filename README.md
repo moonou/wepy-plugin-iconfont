@@ -4,11 +4,11 @@
 # 使用
 ## 安装
 ``` bash
-npm install wepy-plugin-iconfont --save-dev
+npm install wepy-plugin-iconfont@1.0.0
 ```
 or
 ``` bash
-yarn add wepy-plugin-iconfont --dev
+yarn add wepy-plugin-iconfont@1.0.0
 ```
 
 ## 配置
